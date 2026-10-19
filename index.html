@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Rec. handles photos, videos, audio, subscriptions, and privacy choices.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; font-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Privacy policy · Rec.</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #fffaf5;
+      --surface: #ffffff;
+      --ink: #30271f;
+      --muted: #6c5b4c;
+      --line: #e8d9ca;
+      --accent: #ed6b2f;
+      --accent-ink: #95380f;
+      --accent-soft: #fff0e3;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+    a { color: var(--accent-ink); text-underline-offset: 0.2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 5px; border-radius: 3px; }
+    .skip-link { position: absolute; left: 1rem; top: -6rem; padding: 0.75rem 1rem; background: var(--surface); z-index: 1; }
+    .skip-link:focus { top: 1rem; }
+    .page { width: min(100% - 3rem, 52rem); margin-inline: auto; }
+    .brand {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--ink);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.08em;
+      text-decoration: none;
+    }
+    .brand span { color: var(--accent); }
+    header { padding-block: 2.75rem 2rem; }
+    .eyebrow { margin: 0 0 0.6rem; color: var(--accent-ink); font-size: 0.8rem; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.75rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.055em; }
+    .intro { max-width: 43rem; margin: 1.25rem 0 1rem; color: var(--muted); font-size: 1.125rem; }
+    .date { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin-bottom: 2rem; }
+    .summary p { margin: 0; padding: 1rem; background: var(--accent-soft); border-radius: 14px; font-size: 0.9rem; line-height: 1.5; }
+    .summary strong { display: block; margin-bottom: 0.25rem; color: var(--accent-ink); font-weight: 750; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+    nav a { padding-block: 0.45rem; }
+    section { padding-block: 1.75rem; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0 0 0.9rem; font-size: 1.45rem; line-height: 1.3; letter-spacing: -0.025em; }
+    p { margin: 0 0 1rem; }
+    section > :last-child { margin-bottom: 0; }
+    ul { margin: 0 0 1rem; padding-left: 1.4rem; }
+    li + li { margin-top: 0.65rem; }
+    .notice { padding: 1rem 1.15rem; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.75rem 2.5rem; color: var(--muted); font-size: 0.85rem; }
+    footer p { margin: 0; }
+    @media (max-width: 40rem) {
+      .page { width: min(100% - 2rem, 52rem); }
+      .brand { margin-top: 1rem; }
+      header { padding-top: 2rem; }
+      .summary { grid-template-columns: 1fr; gap: 0.5rem; }
+      .summary p { padding: 0.85rem 1rem; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #211b17;
+        --surface: #2c241e;
+        --ink: #fff4e8;
+        --muted: #cfbaa7;
+        --line: #514031;
+        --accent: #ff9a59;
+        --accent-ink: #ffb481;
+        --accent-soft: #39281b;
+      }
+    }
+    @media print {
+      :root { color-scheme: light; --background: #ffffff; --ink: #000000; --muted: #333333; --accent-ink: #000000; --line: #cccccc; --accent-soft: #ffffff; }
+      .page { width: 100%; }
+      .skip-link, nav, .summary { display: none; }
+      .brand, header, section, footer { padding-block: 0.5rem; margin-top: 0; }
+      h1 { font-size: 2.2rem; }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#policy">Skip to privacy policy</a>
+  <div class="page">
+    <a class="brand" href="#top" aria-label="Rec. privacy policy">Rec<span>.</span></a>
+    <header>
+      <p class="eyebrow">Your projects, in your hands</p>
+      <h1>Privacy policy</h1>
+      <p class="intro">How Rec. handles your photos, videos, audio, and other information.</p>
+      <p class="date">Effective and last updated <time datetime="2026-10-19">October 19, 2026</time></p>
+    </header>
+
+    <div class="summary" aria-label="Privacy at a glance">
+      <p><strong>Edited on your device</strong>Your selected media is processed in Rec.</p>
+      <p><strong>No ads or tracking</strong>No advertising or analytics SDKs in the app.</p>
+      <p><strong>Apple handles purchases</strong>Your payment card details are not given to us.</p>
+    </div>
+
+    <nav aria-label="Privacy policy sections">
+      <a href="#app">The app</a>
+      <a href="#media">Media and permissions</a>
+      <a href="#storage">Storage and deletion</a>
+      <a href="#purchases">Subscriptions</a>
+      <a href="#services">Apple services</a>
+      <a href="#website">This website</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="policy" tabindex="-1">
+      <section id="app" aria-labelledby="app-title">
+        <h2 id="app-title">1. About Rec.</h2>
+        <p>Rec. is a photo and video editor maintained by <a href="https://github.com/n-vart">n-vart</a>. This policy covers the Rec. iOS app and this privacy policy website.</p>
+        <p>Rec. processes your projects on your device. We do not operate a media upload service, a user account system, an analytics service, or an advertising service for the app. Rec. does not sell personal information or track you across apps and websites.</p>
+      </section>
+
+      <section id="media" aria-labelledby="media-title">
+        <h2 id="media-title">2. Media and permissions</h2>
+        <p>Rec. accesses content to provide the editing features you choose:</p>
+        <ul>
+          <li><strong>Photos and videos.</strong> With your permission, Rec. can display media from your photo library and import the items you select. You can limit or revoke photo library access in iOS Settings.</li>
+          <li><strong>Files and music.</strong> You can import files you choose, audio extracted from video, and eligible local Music library tracks. Rec. works with an imported copy. A file provider or Apple service may first download an item according to that service’s settings.</li>
+          <li><strong>Microphone.</strong> Rec. uses the microphone when you choose to record audio. Recordings are used in your project.</li>
+          <li><strong>Text and processing results.</strong> Captions, recognized speech, translations, edit settings, and generated videos are used to create and edit your project.</li>
+        </ul>
+        <p>Editing, speech recognition, translation, voice generation, and AI Studio media processing run on your device. Rec. does not upload your selected media, recordings, captions, or processing results to a developer server or an external AI service.</p>
+        <p>Permissions are optional, but the relevant feature may be unavailable if you decline. You can review permissions in iOS Settings.</p>
+      </section>
+
+      <section id="storage" aria-labelledby="storage-title">
+        <h2 id="storage-title">3. Storage, exports, and deletion</h2>
+        <p>Saved projects, imported media, project names, edit decisions, language choices, and settings are stored in the app’s device storage. Rec. also creates temporary working files during import and processing.</p>
+        <p>You can remove saved projects in Rec. Deleting the app removes its local app data; offloading an app can preserve its data. Rec. has no developer account or server copy of your projects to delete.</p>
+        <p>iOS may include app data in device backups, depending on your backup settings. Copies in iCloud or computer backups are managed through Apple’s tools and your backup settings. See <a href="https://support.apple.com/en-us/108770">Apple’s explanation of iCloud Backup</a>.</p>
+        <p>Exports are independent copies. Deleting a project or the app does not delete your original Photos, Files, or Music items, exported copies, copies you shared with other people or services, or copies retained in backups. Manage those copies where they are stored or shared.</p>
+      </section>
+
+      <section id="purchases" aria-labelledby="purchases-title">
+        <h2 id="purchases-title">4. Rec Pro subscriptions</h2>
+        <p>Apple processes Rec Pro purchases and subscription payments through the App Store. Rec. uses StoreKit to read Apple-verified transaction and subscription information so it can unlock paid features and restore access.</p>
+        <p>This information can include the product, transaction identifiers, purchase dates, expiration dates, and refund or revocation status. Rec. does not send these records to a developer billing server. The developer does not receive your payment card number or Apple Account sign-in credentials.</p>
+        <p>Apple manages payment information and purchase records under <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store &amp; Privacy</a>. Manage subscriptions, refunds, and Apple purchase records through your Apple Account and Apple’s support tools.</p>
+      </section>
+
+      <section id="services" aria-labelledby="services-title">
+        <h2 id="services-title">5. Apple services and downloads</h2>
+        <p>Some features need Apple language or translation assets. iOS may download these assets when needed. App Store purchases, purchase restoration, system downloads, and content you access through Apple or other file providers can involve network requests handled by those services.</p>
+        <p>Apple handles information involved in its services under <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> and the notices for the service you use. Your media processing in Rec. does not require uploading project content to an AI service.</p>
+      </section>
+
+      <section id="website" aria-labelledby="website-title">
+        <h2 id="website-title">6. This website and GitHub</h2>
+        <p>This page is hosted by GitHub Pages. It contains no analytics scripts, tracking pixels, forms, external fonts, or added cookies. GitHub processes hosting information: for example, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages records visitor IP addresses for security</a>.</p>
+        <p>GitHub also handles information when you use its accounts, repositories, or issue tracker. Those activities are covered by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">7. Questions and privacy choices</h2>
+        <p>For general questions about this policy, open an issue in the <a href="https://github.com/n-vart/rec-privacy-policy/issues">Rec. privacy policy repository</a>.</p>
+        <p class="notice"><strong>GitHub issues are public.</strong> Do not post photos, videos, recordings, purchase or account identifiers, contact details, or other personal or sensitive information. Your GitHub username and anything you submit may be visible to others.</p>
+        <p>Use iOS Settings to control app permissions and backups, the app to delete saved projects, and your Apple Account settings to manage subscriptions. For information held by Apple or GitHub, use that provider’s privacy and support options.</p>
+      </section>
+
+      <section aria-labelledby="changes-title">
+        <h2 id="changes-title">8. Changes to this policy</h2>
+        <p>We will update this page when Rec.’s data handling changes. The date at the top identifies the current revision.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 n-vart · Rec.</p>
+      <p><a href="https://github.com/n-vart/rec-privacy-policy">Policy source</a> · <a href="#top">Back to top</a></p>
+    </footer>
+  </div>
+</body>
+</html>
